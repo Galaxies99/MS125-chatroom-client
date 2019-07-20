@@ -110,7 +110,7 @@
     <string>Display Password</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="registerBtn">
+  <widget class="QPushButton" name="regBtn">
    <property name="geometry">
     <rect>
      <x>70</x>
