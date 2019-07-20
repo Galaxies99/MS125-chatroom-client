@@ -47,7 +47,7 @@
      </rect>
     </property>
     <property name="placeholderText">
-     <string>Click Basics -&gt; Connect to Server to start chatting!</string>
+     <string>Click Basics -&gt; Connect To Server to start Chatting!</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

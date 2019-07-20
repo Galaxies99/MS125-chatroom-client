@@ -14,13 +14,17 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(add_new_msg(const QString&)));
     connect(this, SIGNAL(newMessageSent(const QString &)), this, SLOT(add_new_msg(const QString &)));
+
     setWindowTitle(tr("ChatRoom"));
     setWindowIcon(QIcon(":/Chat.ico"));
+
+    cl -> connectToServer("127.0.0.1", 6666);
 }
 
 //destroy
 MainWindow::~MainWindow()
 {
+    if(isTourist == 0) cl -> sendMessage("<" + UserName + "> log out.");
     delete ui;
     if(cl != nullptr)
         delete cl;
@@ -41,7 +45,7 @@ void MainWindow::on_send_button_clicked(){
 //to connect to the ip you want
 void MainWindow::on_actionConnect_To_Server_triggered(){
     cl -> connectToServer("127.0.0.1", 6666);
-//    cl -> sendMessage()
+    if(isTourist == 0) cl -> sendMessage("<" + UserName + "> log in.");
 }
 
 //show message on textbrowser
