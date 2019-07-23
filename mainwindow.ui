@@ -76,6 +76,19 @@
      <string>Dialog</string>
     </property>
    </widget>
+   <widget class="QLabel" name="level_label">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>370</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

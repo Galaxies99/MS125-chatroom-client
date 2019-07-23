@@ -21,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     chatClient *cl;
+    bool isLogin;
 
 signals:
     void newMessageSent(const QString &);
@@ -31,6 +32,7 @@ private slots:
     void on_actionChange_Account_triggered();
     void on_actionExit_triggered();
     void add_new_msg(const QString&);
+    void on_info_text_textChanged();
 };
 
 #endif // MAINWINDOW_H

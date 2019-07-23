@@ -11,10 +11,10 @@ regist::regist(QWidget *parent) :
     ui->setupUi(this);
 
     cl = new chatClient(this);
+    cl -> connectToServer("127.0.0.1", 6666);
 
     connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
 
-    cl -> connectToServer("127.0.0.1", 6666);
     setWindowTitle(tr("Register"));
     setWindowIcon(QIcon(":/Chat.ico"));
 }
@@ -41,7 +41,7 @@ void regist::on_regBtn_clicked()
     QString username = ui -> usernameEdit -> text().trimmed();
     QString pwd = ui -> pwdEdit -> text();
     QString pwd2 = ui -> pwd2Edit -> text();
-    if(username.length() == 0 || username.length() > 256) {
+    if(username.length() < 3 || username.length() > 256) {
         QMessageBox :: warning(this, tr("Warning"), tr("Invalid username!"), QMessageBox :: Yes);
         ui -> usernameEdit -> clear();
         ui -> pwdEdit -> clear();

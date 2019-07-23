@@ -10,8 +10,8 @@ change::change(QWidget *parent) :
 {
     ui->setupUi(this);
     cl = new chatClient(this);
-
     cl -> connectToServer("127.0.0.1", 6666);
+
     connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
     setWindowTitle(tr("Change Account"));
     setWindowIcon(QIcon(":/Chat.ico"));
@@ -30,7 +30,7 @@ void change::on_changeBtn_clicked()
     QString newusr = ui -> newusernameEdit -> text().trimmed();
     QString oldpwd = ui -> pwdEdit -> text();
     QString newpwd = ui -> newpwdEdit -> text();
-    if(oldusr.length() == 0 || oldusr.length() > 256 || newusr.length() == 0 || newusr.length() > 256) {
+    if(oldusr.length() < 3 || oldusr.length() > 256 || newusr.length() < 3 || newusr.length() > 256) {
         QMessageBox :: warning(this, tr("Warning"), tr("Invalid username!"), QMessageBox :: Yes);
         ui -> usernameEdit -> clear();
         ui -> newusernameEdit -> clear();
