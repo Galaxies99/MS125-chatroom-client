@@ -49,7 +49,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Comfirm Password</string>
+    <string>Confirm Password</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="usernameEdit">
