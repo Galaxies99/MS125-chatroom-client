@@ -24,6 +24,7 @@ public slots:
 public:
     void connectToServer(QString ip, uint16_t port);
     void sendMessage(QString msg);
+    void sendMessage(QByteArray msg);
 };
 
 #endif // CLIENT_H

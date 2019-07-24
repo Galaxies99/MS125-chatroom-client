@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #f9f0fe;
+}</string>
+  </property>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
@@ -21,6 +26,9 @@
      <width>111</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
    </property>
    <property name="text">
     <string>New Password</string>
@@ -35,6 +43,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
    <property name="text">
     <string>New Username</string>
    </property>
@@ -47,6 +58,9 @@
      <width>111</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
    </property>
    <property name="text">
     <string>Password</string>
@@ -61,6 +75,9 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
    <property name="text">
     <string>Old Username</string>
    </property>
@@ -73,6 +90,17 @@
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
    </property>
    <property name="placeholderText">
     <string>Your old username</string>
@@ -87,6 +115,17 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
    <property name="placeholderText">
     <string>Your new username</string>
    </property>
@@ -99,6 +138,17 @@
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -116,6 +166,17 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
    </property>
@@ -132,6 +193,9 @@
      <height>19</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
    <property name="text">
     <string>Display Password</string>
    </property>
@@ -145,6 +209,17 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: #87CEFA;
+	border-radius: 10px; 
+	color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #00BFFF; 
+}</string>
+   </property>
    <property name="text">
     <string>Change</string>
    </property>
@@ -157,6 +232,15 @@
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton { 
+	background-color: rgb(255, 159, 198); 
+	border-radius: 10px; color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; } 
+QPushButton:hover { 
+	background-color: rgb(255, 133, 166); 
+}</string>
    </property>
    <property name="text">
     <string>Back</string>

@@ -13,18 +13,20 @@ void chatClient::connectToServer(QString ip, uint16_t port){
     sock->connectToHost(ip, port);
 }
 
-void chatClient::sendMessage(QString msg){
-    sock->write(msg.toUtf8());
+void chatClient::sendMessage(QByteArray msg){
+    sock->write(msg);
     sock->waitForBytesWritten();
     return;
 }
 
-void chatClient::readMsg(){
-    QString receivedMsg = QString::fromUtf8(sock->readAll());
-    QString msgToHandle = receivedMsg;
-    emit newMessageRead(msgToHandle);
+void chatClient::sendMessage(QString msg){
+    sendMessage(msg.toUtf8());
 }
 
+void chatClient::readMsg(){
+    QString receivedMsg = QString::fromUtf8(sock->readAll());
+    emit newMessageRead(receivedMsg);
+}
 chatClient::~chatClient(){
     if(sock != nullptr) delete sock;
 }

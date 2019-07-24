@@ -4,6 +4,8 @@
 
 bool isTourist;
 QString UserName;
+QString ipAddr;
+int portAddr;
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +14,6 @@ int main(int argc, char *argv[])
     login dlg;
     if(dlg.exec() == QDialog :: Accepted) {
         dlg.Disconnect();
-        if(isTourist) UserName = "Tourist";
         MainWindow w;
         w.show();
         return a.exec();

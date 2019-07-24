@@ -3,6 +3,8 @@
 #include <QMessageBox>
 
 extern QString UserName;
+extern QString ipAddr;
+extern int portAddr;
 
 change::change(QWidget *parent) :
     QDialog(parent),
@@ -10,7 +12,7 @@ change::change(QWidget *parent) :
 {
     ui->setupUi(this);
     cl = new chatClient(this);
-    cl -> connectToServer("127.0.0.1", 6666);
+    cl -> connectToServer(ipAddr, portAddr);
 
     connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
     setWindowTitle(tr("Change Account"));
@@ -38,7 +40,7 @@ void change::on_changeBtn_clicked()
         ui -> newpwdEdit -> clear();
         return ;
     }
-    if(oldusr == "Tourist" || newusr == "Tourist") {
+    if(oldusr.left(7) == "Tourist" || newusr.left(7) == "Tourist") {
         QMessageBox :: warning(this, tr("Warning"), tr("Invalid username!"), QMessageBox :: Yes);
         ui -> usernameEdit -> clear();
         ui -> newusernameEdit -> clear();

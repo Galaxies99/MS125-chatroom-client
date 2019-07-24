@@ -7,11 +7,16 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>280</height>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color: #f9f0fe;
+}</string>
   </property>
   <widget class="QLabel" name="usrLabel">
    <property name="geometry">
@@ -21,6 +26,9 @@
      <width>81</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
    </property>
    <property name="text">
     <string>User Name</string>
@@ -35,6 +43,9 @@
      <height>15</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
    <property name="text">
     <string>Password</string>
    </property>
@@ -42,11 +53,14 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>80</x>
      <y>170</y>
-     <width>291</width>
+     <width>241</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
    </property>
    <property name="text">
     <string>Leave blank to log in as a tourist</string>
@@ -61,6 +75,17 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
    <property name="placeholderText">
     <string>Your username</string>
    </property>
@@ -73,6 +98,17 @@
      <width>191</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -90,6 +126,9 @@
      <height>19</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
    <property name="text">
     <string>Display Password</string>
    </property>
@@ -98,10 +137,21 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>220</y>
+     <y>300</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: #87CEFA;
+	border-radius: 10px; 
+	color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #00BFFF; 
+}</string>
    </property>
    <property name="text">
     <string>Login</string>
@@ -111,10 +161,20 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>220</y>
+     <y>300</y>
      <width>93</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton { 
+	background-color: #ccaefe; 
+	border-radius: 10px; color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #b98fff; 
+}</string>
    </property>
    <property name="text">
     <string>Register</string>
@@ -124,13 +184,108 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>220</y>
+     <y>300</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton { 
+	background-color: rgb(255, 159, 198); 
+	border-radius: 10px; color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; } 
+QPushButton:hover { 
+	background-color: rgb(255, 133, 166); 
+}</string>
+   </property>
    <property name="text">
     <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="extLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>210</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
+   <property name="text">
+    <string>IPAddress</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ipEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>210</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
+   <property name="text">
+    <string>127.0.0.1</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="portEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
+   <property name="text">
+    <string>6666</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="extLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>250</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
+   <property name="text">
+    <string>Port</string>
    </property>
   </widget>
  </widget>

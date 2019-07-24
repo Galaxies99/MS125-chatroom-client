@@ -6,12 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>891</width>
-    <height>651</height>
+    <width>892</width>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #f9f0fe;
+}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTextBrowser" name="info_text">
@@ -23,6 +28,17 @@
       <height>331</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 5px;
+	border: 1px, solid #000000;
+}
+QTextBrowser:hover {
+	border: 1px solid #34495E;
+}</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="send_button">
     <property name="geometry">
@@ -32,6 +48,17 @@
       <width>141</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #87CEFA;
+	border-radius: 10px; 
+	color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #00BFFF; 
+}</string>
     </property>
     <property name="text">
      <string>Send Message!</string>
@@ -46,6 +73,17 @@
       <height>131</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 5px;
+	border: 1px, solid #000000;
+}
+QTextEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+    </property>
     <property name="placeholderText">
      <string>Click Basics -&gt; Connect To Server to start Chatting!</string>
     </property>
@@ -59,6 +97,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+    </property>
     <property name="text">
      <string>Your Text</string>
     </property>
@@ -67,10 +108,13 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>5</y>
       <width>201</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
     </property>
     <property name="text">
      <string>Dialog</string>
@@ -80,10 +124,13 @@
     <property name="geometry">
      <rect>
       <x>690</x>
-      <y>370</y>
+      <y>366</y>
       <width>181</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
     </property>
     <property name="text">
      <string/>
@@ -95,7 +142,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>891</width>
+     <width>892</width>
      <height>26</height>
     </rect>
    </property>
@@ -109,15 +156,6 @@
    </widget>
    <addaction name="menuServer"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionConnect_To_Server">
    <property name="text">
     <string>Connect To Server</string>
@@ -136,6 +174,11 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSend_Photo">
+   <property name="text">
+    <string>Send Photo</string>
    </property>
   </action>
  </widget>

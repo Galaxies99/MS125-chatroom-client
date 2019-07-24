@@ -4,16 +4,14 @@
 
 extern bool isTourist;
 extern QString UserName;
+extern QString ipAddr;
+extern int portAddr;
 
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
 {
     ui->setupUi(this);
-    cl = new chatClient(this);
-    cl -> connectToServer("127.0.0.1", 6666);
-
-    connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
 
     setWindowTitle(tr("Login"));
     setWindowIcon(QIcon(":/Chat.ico"));
@@ -28,7 +26,8 @@ login::~login()
 
 void login::receive_signal(const QString& rmsg) {
     if(isTourist) {
-        if(rmsg == "Accept") {
+        if(rmsg.left(6) == "Accept") {
+            UserName = rmsg.mid(7);
             accept();
             return ;
         } else {
@@ -57,6 +56,16 @@ void login::receive_signal(const QString& rmsg) {
 
 void login::on_loginBtn_clicked()
 {
+    QString ip = ui -> ipEdit -> text().trimmed();
+    QString port = ui -> portEdit -> text().trimmed();
+    ipAddr = ip;
+    portAddr = port.toInt();
+
+    cl = new chatClient(this);
+    cl -> connectToServer(ipAddr, portAddr);
+
+    connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
+
     QString username = ui -> usrLineEdit -> text().trimmed();
     QString pwd = ui -> pwdLineEdit -> text();
     isTourist = 0;
@@ -82,7 +91,7 @@ void login::on_loginBtn_clicked()
         ui -> pwdLineEdit -> clear();
         return ;
     }
-    if(username == "Tourist") {
+    if(username.left(7) == "Tourist") {
         QMessageBox :: warning(this, tr("Warning"), tr("Invalid username!"), QMessageBox :: Yes);
         ui -> usrLineEdit -> clear();
         ui -> pwdLineEdit -> clear();

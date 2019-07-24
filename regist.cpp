@@ -3,6 +3,8 @@
 
 extern bool isTourist;
 extern QString UserName;
+extern QString ipAddr;
+extern int portAddr;
 
 regist::regist(QWidget *parent) :
     QDialog(parent),
@@ -11,7 +13,7 @@ regist::regist(QWidget *parent) :
     ui->setupUi(this);
 
     cl = new chatClient(this);
-    cl -> connectToServer("127.0.0.1", 6666);
+    cl -> connectToServer(ipAddr, portAddr);
 
     connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
 
@@ -48,7 +50,7 @@ void regist::on_regBtn_clicked()
         ui -> pwd2Edit -> clear();
         return ;
     }
-    if(username == "Tourist") {
+    if(username.left(7) == "Tourist") {
         QMessageBox :: warning(this, tr("Warning"), tr("Invalid username!"), QMessageBox :: Yes);
         ui -> usernameEdit -> clear();
         ui -> pwdEdit -> clear();
