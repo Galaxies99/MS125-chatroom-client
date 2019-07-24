@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>892</width>
-    <height>628</height>
+    <height>763</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -25,8 +31,14 @@
       <x>20</x>
       <y>30</y>
       <width>851</width>
-      <height>331</height>
+      <height>461</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">QTextBrowser { 
@@ -43,11 +55,17 @@ QTextBrowser:hover {
    <widget class="QPushButton" name="send_button">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>550</y>
+      <x>470</x>
+      <y>680</y>
       <width>141</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
@@ -68,10 +86,16 @@ QPushButton:hover {
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>390</y>
+      <y>520</y>
       <width>851</width>
       <height>131</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">QTextEdit { 
@@ -92,10 +116,16 @@ QTextEdit:hover {
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>370</y>
+      <y>500</y>
       <width>201</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
@@ -113,6 +143,12 @@ QTextEdit:hover {
       <height>21</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
     </property>
@@ -124,16 +160,51 @@ QTextEdit:hover {
     <property name="geometry">
      <rect>
       <x>690</x>
-      <y>366</y>
+      <y>496</y>
       <width>181</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="styleSheet">
      <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pic_button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>680</y>
+      <width>141</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { 
+	background-color: #ccaefe; 
+	border-radius: 10px; color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #b98fff; 
+}</string>
+    </property>
+    <property name="text">
+     <string>Send Picture!</string>
     </property>
    </widget>
   </widget>
@@ -152,6 +223,7 @@ QTextEdit:hover {
     </property>
     <addaction name="actionConnect_To_Server"/>
     <addaction name="actionChange_Account"/>
+    <addaction name="actionBlack_List"/>
     <addaction name="actionExit"/>
    </widget>
    <addaction name="menuServer"/>
@@ -179,6 +251,11 @@ QTextEdit:hover {
   <action name="actionSend_Photo">
    <property name="text">
     <string>Send Photo</string>
+   </property>
+  </action>
+  <action name="actionBlack_List">
+   <property name="text">
+    <string>Black List</string>
    </property>
   </action>
  </widget>

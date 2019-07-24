@@ -23,16 +23,15 @@ private:
     chatClient *cl;
     bool isLogin;
 
-signals:
-    void newMessageSent(const QString &);
-
 private slots:
     void on_send_button_clicked();
     void on_actionConnect_To_Server_triggered();
     void on_actionChange_Account_triggered();
+    void on_actionBlack_List_triggered();
     void on_actionExit_triggered();
-    void add_new_msg(const QString&);
+    void add_new_msg(const QByteArray&);
     void on_info_text_textChanged();
+    void on_pic_button_clicked();
 };
 
 #endif // MAINWINDOW_H

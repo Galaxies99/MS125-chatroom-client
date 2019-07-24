@@ -12,11 +12,6 @@ regist::regist(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    cl = new chatClient(this);
-    cl -> connectToServer(ipAddr, portAddr);
-
-    connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
-
     setWindowTitle(tr("Register"));
     setWindowIcon(QIcon(":/Chat.ico"));
 }
@@ -40,6 +35,14 @@ void regist::receive_signal(const QString& msg) {
 
 void regist::on_regBtn_clicked()
 {
+    QString ip = ui -> ipEdit -> text().trimmed();
+    QString port = ui -> portEdit -> text().trimmed();
+
+    cl = new chatClient(this);
+    cl -> connectToServer(ip, port.toInt());
+
+    connect(cl, SIGNAL(newMessageRead(const QString&)), this, SLOT(receive_signal(const QString&)));
+
     QString username = ui -> usernameEdit -> text().trimmed();
     QString pwd = ui -> pwdEdit -> text();
     QString pwd2 = ui -> pwd2Edit -> text();

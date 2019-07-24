@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    blacklist.cpp \
     change.cpp \
     login.cpp \
         main.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     regist.cpp
 
 HEADERS += \
+    blacklist.h \
     change.h \
     login.h \
         mainwindow.h \
@@ -40,6 +42,7 @@ HEADERS += \
     regist.h
 
 FORMS += \
+        blacklist.ui \
         change.ui \
         login.ui \
         mainwindow.ui \

@@ -19,6 +19,7 @@ private:
 
 signals:
     void newMessageRead(const QString&);
+    void newMessageReadByte(const QByteArray&);
 public slots:
     void readMsg();
 public:

@@ -24,9 +24,12 @@ void chatClient::sendMessage(QString msg){
 }
 
 void chatClient::readMsg(){
-    QString receivedMsg = QString::fromUtf8(sock->readAll());
-    emit newMessageRead(receivedMsg);
+    QByteArray byteMsg = sock->readAll();
+    QString strMsg = QString::fromUtf8(byteMsg);
+    emit newMessageReadByte(byteMsg);
+    emit newMessageRead(strMsg);
 }
+
 chatClient::~chatClient(){
     if(sock != nullptr) delete sock;
 }

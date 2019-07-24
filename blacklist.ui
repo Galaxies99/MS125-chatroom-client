@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>blacklist</class>
+ <widget class="QDialog" name="blacklist">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>296</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+	background-color:#f9f0fe;
+}</string>
+  </property>
+  <widget class="QLabel" name="usrLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
+   <property name="text">
+    <string>Add an user to your black list:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="blackEdit">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>191</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="whiteEdit">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>191</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { 
+	font-family: &quot;Microsoft YaHei&quot;; 
+	padding: 2px;
+	border-radius: 2px;
+	border: 1px, solid #000000;
+}
+QLineEdit:hover {
+	border: 1px solid #34495E;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="usrLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>130</y>
+     <width>291</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel { font-family: &quot;Microsoft YaHei&quot;; }</string>
+   </property>
+   <property name="text">
+    <string>Remove an user from your black list:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitBtn">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>230</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton { 
+	background-color: rgb(255, 159, 198); 
+	border-radius: 10px; color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; } 
+QPushButton:hover { 
+	background-color: rgb(255, 133, 166); 
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addBtn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>80</y>
+     <width>81</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: #87CEFA;
+	border-radius: 10px; 
+	color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #00BFFF; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="removeBtn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>170</y>
+     <width>81</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: #87CEFA;
+	border-radius: 10px; 
+	color: rgb(0, 0, 0); 
+	font-family: &quot;Microsoft YaHei&quot; 
+} 
+QPushButton:hover { 
+	background-color: #00BFFF; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>blacklist</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>626</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

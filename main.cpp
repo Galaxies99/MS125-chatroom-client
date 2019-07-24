@@ -6,10 +6,11 @@ bool isTourist;
 QString UserName;
 QString ipAddr;
 int portAddr;
+int picID;
 
 int main(int argc, char *argv[])
 {
-    isTourist = 0;
+    isTourist = 0; picID = 0;
     QApplication a(argc, argv);
     login dlg;
     if(dlg.exec() == QDialog :: Accepted) {
