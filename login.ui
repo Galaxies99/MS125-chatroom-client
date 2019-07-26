@@ -290,5 +290,22 @@ QLineEdit:hover {
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>exitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>login</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
